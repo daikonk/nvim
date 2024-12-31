@@ -1,4 +1,4 @@
-local Utils = require("plugin/utils")
+local Utils = require("config.utils")
 
 -- vimrc utils
 local vnoremap = Utils.vnoremap
