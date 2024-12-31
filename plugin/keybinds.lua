@@ -1,5 +1,15 @@
+local Utils = require("plugin/utils")
+
+-- vimrc utils
+local vnoremap = Utils.vnoremap
+
+-- Leader settings
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+
+-- Better visual mode indent
+vnoremap("<", "<gv")
+vnoremap(">", ">gv")
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = false
