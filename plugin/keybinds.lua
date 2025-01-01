@@ -3,9 +3,7 @@ local Utils = require("config.utils")
 -- vimrc utils
 local vnoremap = Utils.vnoremap
 
--- Leader settings
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+-- Leader settings in init.lua
 
 -- Better visual mode indent
 vnoremap("<", "<gv")
