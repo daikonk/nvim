@@ -25,9 +25,9 @@ return {
 		palette_overrides = {},
 		overrides = {},
 		dim_inactive = false,
-		transparent_mode = false,
+		transparent_mode = true,
 	},
-	-- init = function()
-	-- 	vim.cmd.colorscheme("gruvbox")
-	-- end,
+	init = function()
+		vim.cmd.colorscheme("gruvbox")
+	end,
 }
