@@ -227,7 +227,7 @@ return {
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls" },
+				ensure_installed = { "lua_ls", "clangd" },
 				automatic_installation = true,
 				handlers = {
 					function(server_name)
@@ -373,7 +373,7 @@ return {
 				-- Disable "format_on_save lsp_fallback" for languages that don't
 				-- have a well standardized coding style. You can add additional
 				-- languages here or re-enable it for the disabled ones.
-				local disable_filetypes = { c = true, cpp = true }
+				local disable_filetypes = {}
 				local lsp_format_opt
 				if disable_filetypes[vim.bo[bufnr].filetype] then
 					lsp_format_opt = "never"
@@ -388,6 +388,8 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				typescript = { "ts_ls" },
+				cpp = { "clang-format" },
+				c = { "clang-format" },
 			},
 		},
 	},
